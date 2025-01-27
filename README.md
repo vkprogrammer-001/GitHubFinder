@@ -18,7 +18,7 @@ Welcome to the **GitHub Account Finder** project! This personal front-end applic
 
 Follow these steps to set up the GitHub Account Finder project:
 
-1. Clone the `githubAccountFinder-react.js` repository:
+1. Clone the `githubFinder` repository:
     ```
     git clone https://github.com/vkprogrammer-001/githubAccountFinder-react.js.git
     ```
