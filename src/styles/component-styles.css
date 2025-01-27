@@ -1,0 +1,118 @@
+
+/* header */
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #699DFF;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px 40px;
+}
+
+.nav-list li {
+    margin: 0 10px;
+    font-family: Inknut Antiqua;
+    font-size: 18px;
+    font-weight:normal;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #1E1E1E;
+}
+
+/* hero section */
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#2C80D9, #57BABC);
+    padding: 20px 0;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 250px 0;
+}
+
+.hero-section button {
+    margin: 20px 0;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    background-color: #DBDBDB;
+}
+
+.hero-section button:active {
+    background-color: #d2cfcf;
+}
+
+/* About us */
+
+.about-us-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 450px;
+    width: 90%;
+    border-radius: 23px;
+    background-color: #DBDBDB;
+    padding: 20px 20px;
+    margin-bottom: 120px;
+}
+
+.about-us-header{
+    display: flex;
+    width: 55%;
+    flex-direction: column;
+    text-align: justify;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.about-us-image {
+    justify-content: center;
+    margin: 20px 10px;
+    border-radius: 33px;
+}
+
+/* footer */
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    /* background-color: #699DFF; */
+}
+
+.footer-list{
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.footer-list li {
+    text-decoration: none;
+    margin: 0 10px;
+    
+}
+
+.feature-card {
+    height: 500px;
+    width: 300px;
+    border-radius: 23px;
+    background-color: #DBDBDB;
+}
