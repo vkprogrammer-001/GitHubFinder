@@ -1,6 +1,7 @@
 const AboutUs = () => {
   return (
-    <div className="about-us-container" id="about-us">
+    <div id="about-us">
+    <div className="about-us-container" >
       <div className="about-us-header">
         <h2 style={{fontFamily: "Inknut Antiqua", fontSize:"42px", fontWeight:"500"}}>Learn more about our platform</h2>
         <br />
@@ -24,6 +25,7 @@ const AboutUs = () => {
       <div className="about-us-image">
         <img src="/assets/aboutus.webp" alt="About us" width={350} height={350} style={{borderRadius:"40px"}}/>
       </div>
+    </div>
     </div>
   );
 };

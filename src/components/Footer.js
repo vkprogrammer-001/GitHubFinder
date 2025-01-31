@@ -6,7 +6,7 @@ const footer = () => {
       <div className="footer-container">
         <ul className="footer-list">
           <li>
-            <a href="/">
+            <a href="https://github.com/vkprogrammer-001/GitHubFinder" >
               <img
                 src="assets/github.svg"
                 alt="Github"
