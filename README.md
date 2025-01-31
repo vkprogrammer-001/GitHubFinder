@@ -1,6 +1,6 @@
-# GitHub Account Finder
+# GitHubFinder
 
-Welcome to the **GitHub Account Finder** project! This personal front-end application allows users to search for GitHub users and view their profiles. Whether you're exploring developers' work or just curious, this platform provides an interactive experience for discovering GitHub accounts.
+Welcome to the **GitHubFinder** project! This personal front-end application allows users to search for GitHub users and view their profiles. Whether you're exploring developers' work or just curious, this platform provides an interactive experience for discovering GitHub accounts.
 
 ## Project Overview
 
@@ -18,9 +18,9 @@ Welcome to the **GitHub Account Finder** project! This personal front-end applic
 
 Follow these steps to set up the GitHub Account Finder project:
 
-1. Clone the `githubAccountFinder-react.js` repository:
+1. Clone the `githubFinder` repository:
     ```
-    git clone https://github.com/vkprogrammer-001/githubAccountFinder-react.js.git
+    git clone https://github.com/vkprogrammer-001/GitHubFinder.git
     ```
 
 2. Open the project in your preferred IDE.
