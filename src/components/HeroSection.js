@@ -1,7 +1,9 @@
 import "../styles/component-styles.css";
 import Footer from "../components/Footer";
 import AboutUs from "../components/AboutUs";
-// import FeatureCard from "../components/FeatureCard";
+import FeatureCard from "../components/FeatureCard";
+import ContactUs from "./ContactUs";
+import BackToTop from "./BackToTop";
 
 const heroSection = () => {
   return (
@@ -31,7 +33,10 @@ const heroSection = () => {
         {/* <FeatureCard/> */}
       </div>
       <AboutUs />
+      <FeatureCard/>
+      <ContactUs/>
       <Footer />
+      <BackToTop/>
     </div>
   );
 };
