@@ -1,6 +1,6 @@
 import '../styles/component-styles.css'
 
-const navBar = () => {
+const NavBar = () => {
   return (
     <header>
       <nav className="navbar">
@@ -24,4 +24,4 @@ const navBar = () => {
   );
 };
 
-export default navBar;
+export default NavBar;

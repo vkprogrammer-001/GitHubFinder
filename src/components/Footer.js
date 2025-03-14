@@ -1,6 +1,6 @@
 import "../styles/component-styles.css";
 
-const footer = () => {
+const Footer = () => {
   return (
     <footer>
       <div className="footer-container">
@@ -37,4 +37,4 @@ const footer = () => {
   );
 };
 
-export default footer;
+export default Footer;

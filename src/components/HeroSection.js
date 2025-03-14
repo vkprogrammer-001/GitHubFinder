@@ -1,11 +1,18 @@
 import "../styles/component-styles.css";
-import Footer from "../components/Footer";
-import AboutUs from "../components/AboutUs";
-import FeatureCard from "../components/FeatureCard";
+import Footer from "./Footer";
+import AboutUs from "./AboutUs";
+import FeatureCard from "./FeatureCard";
 import ContactUs from "./ContactUs";
 import BackToTop from "./BackToTop";
+import { useNavigate } from "react-router-dom";
 
-const heroSection = () => {
+const HeroSection = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/search');
+  };
+
   return (
     <div className="hero-section">
       <div className="hero-content">
@@ -27,7 +34,7 @@ const heroSection = () => {
         >
           Find GitHub Accounts Effortlessly!
         </h4>
-        <button type="submit" style={{ fontFamily: "Inria Serif" }}>
+        <button type="submit" onClick={handleClick} style={{ fontFamily: "Inria Serif" }}>
           SEARCH
         </button>
         {/* <FeatureCard/> */}
@@ -41,4 +48,4 @@ const heroSection = () => {
   );
 };
 
-export default heroSection;
+export default HeroSection;

@@ -1,53 +1,49 @@
-import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
-import { fetchUser, fetchUserRepositories } from "../api/githubApi.js";
+import React, { useState } from "react";
+// import { fetchUser } from "../api/githubApi.js";
+import "../styles/component-styles.css";
+import Footer from "../components/Footer";
+import SearchBar from "../components/SearchBar";
+import UserList from "../components/UserList";
 
 const SearchResultsPage = () => {
-  const location = useLocation();
-  const queryParams = new URLSearchParams(location.search);
-  const username = queryParams.get("user");
+  const [searchTerm, setSearchTerm] = useState('');
+  // const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null); // To handle errors explicitly
 
-  const [userData, setUserData] = useState(null);
-  const [repos, setRepos] = useState([]);
-  const [error, setError] = useState(null);
+  const handleSearch = async (query) => {
+    setSearchTerm(query); // Update searchTerm state
 
-  useEffect(() => {
-    if (username) {
-      // Fetch user data
-      fetchUser(username)
-        .then((data) => setUserData(data))
-        .catch((err) => setError(err.message));
-
-      // Fetch user repositories
-      fetchUserRepositories(username)
-        .then((data) => setRepos(data))
-        .catch((err) => setError(err.message));
-    }
-  }, [username]);
-
-  if (error) {
-    return <h2 style={{ color: "red" }}>Error: {error}</h2>;
-  }
+    
+    setError(null);
+  };
 
   return (
-    <div>
-      {userData && (
-        <div>
-          <h2>{userData.name}</h2>
-          <p>{userData.bio}</p>
-        </div>
-      )}
-      {repos.length > 0 && (
-        <ul>
-          {repos.map((repo) => (
-            <li key={repo.id}>
-              <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
-                {repo.name}
-              </a>
-            </li>
-          ))}
-        </ul>
-      )}
+    <div className="search-page-header">
+      <div className="search-page-content">
+        <h1
+          style={{
+            fontFamily: "Inknut Antiqua",
+            fontSize: "95px",
+            fontWeight: "500",
+          }}
+        >
+          GitHub Finder
+        </h1>
+        <h4
+          style={{
+            fontFamily: "Inria Serif",
+            fontSize: "20px",
+            fontWeight: "normal",
+          }}
+        >
+          Find GitHub Accounts Effortlessly!
+        </h4>
+        <SearchBar onSearch={handleSearch} />
+      </div>
+      {error && <p className="error-message">Error: {error}</p>}
+      {/* {loading && <p>Loading users...</p>}  */}
+      <UserList searchTerm={searchTerm} />
+      <Footer />
     </div>
   );
 };
