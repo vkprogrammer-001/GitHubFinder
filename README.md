@@ -2,7 +2,7 @@
 
 A modern, responsive web application that allows users to search for GitHub profiles easily and efficiently. View user details, repositories, and other GitHub information in a clean, intuitive interface.
 
-
+<img width="1440" alt="app-preview" src="https://github.com/user-attachments/assets/7cebda4c-35fa-431b-96fd-9451d674bbe0" />
 
 ## ✨ Features
 
