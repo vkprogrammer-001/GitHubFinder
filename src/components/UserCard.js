@@ -1,52 +1,66 @@
-// import React, { useState, useEffect } from "react";
-// import { fetchUserData } from "../api/githubApi.js";
+import React, { useContext } from "react";
+import ThemeContext from "../context/ThemeContext";
+import "../styles/theme.css";
 
 const UserCard = ({ user }) => {
+  const { darkMode } = useContext(ThemeContext);
+
   return (
     <div className="user-card-container">
-      <div className="user-card" id="user-card">
+      <div className={`user-card ${darkMode ? 'dark-mode' : ''}`}>
         <div className="user-image">
           <img
             src={user.avatar_url}
             alt={user.login}
-            width={300}
-            height={250}
-            style={{ borderRadius: "40px" }}
+            loading="lazy"
           />
         </div>
-        <br />
         <div className="user-content">
           <h3
             style={{
               fontFamily: "Inknut Antiqua",
-              fontSize: "28px",
+              fontSize: "24px",
               fontWeight: "500",
+              marginBottom: "8px",
+              color: "var(--text-primary)"
             }}
           >
             {user.login}
           </h3>
-          <br />
+          
           <p
             style={{
-              color: "#045C82",
+              color: "var(--accent-color)",
               fontFamily: "Inria Serif",
-              fontSize: "18px",
+              fontSize: "16px",
               fontWeight: "normal",
+              marginBottom: "12px"
             }}
           >
-            {user.name} | <a href="user.url">visit</a>
+            {user.name || user.login} | <a href={user.html_url} target="_blank" rel="noopener noreferrer">Visit Profile</a>
           </p>
-          <br />
+          
+          <div className="user-stats">
+            <span>👥 {user.followers} followers</span>
+            <span>📚 {user.public_repos} repos</span>
+          </div>
 
           <p
             style={{
               fontFamily: "Inria Serif",
-              fontSize: "16px",
+              fontSize: "14px",
               fontWeight: "normal",
+              color: "var(--text-secondary)",
+              marginTop: "12px",
+              flexGrow: 1
             }}
           >
-            {user.bio}
+            {user.bio || "No biography available"}
           </p>
+          
+          <div className="user-location">
+            {user.location && <p>📍 {user.location}</p>}
+          </div>
         </div>
       </div>
     </div>

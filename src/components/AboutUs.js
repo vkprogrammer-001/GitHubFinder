@@ -3,9 +3,9 @@ const AboutUs = () => {
     <div id="about-us">
     <div className="about-us-container" >
       <div className="about-us-header">
-        <h2 style={{fontFamily: "Inknut Antiqua", fontSize:"42px", fontWeight:"500"}}>Learn more about our platform</h2>
+        <h2 style={{fontFamily: "Inknut Antiqua", fontSize:"42px", fontWeight:"500", color: "var(--text-tertiary)"}}>Learn more about our platform</h2>
         <br />
-        <p style={{fontFamily: "Inria Serif", fontSize:"20px", fontWeight:"normal"}}>
+        <p style={{fontFamily: "Inria Serif", fontSize:"20px", fontWeight:"normal", color: "var(--text-tertiary)"}}>
           At GitHub Finder, we harness the power of advanced search technology
           to simplify the process of locating GitHub accounts and repositories.
           Our user-friendly platform is designed to assist developers,
@@ -15,7 +15,7 @@ const AboutUs = () => {
           and understand the contributions of developers.
         </p>
         <br />
-        <p style={{fontFamily: "Inria Serif", fontSize:"20px", fontWeight:"normal"}}>
+        <p style={{fontFamily: "Inria Serif", fontSize:"20px", fontWeight:"normal", color: "var(--text-tertiary)"}}>
           Whether you're on the hunt for a specific developer, exploring new
           projects, or seeking collaboration opportunities, GitHub Finder is
           your go-to resource. Discover the ease of connecting with the tech

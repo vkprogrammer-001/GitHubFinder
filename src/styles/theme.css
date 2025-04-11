@@ -1,0 +1,84 @@
+/* Light Theme (Default) */
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --text-primary: #212529;
+  --text-secondary: #6c757d;
+  --border-color: #dee2e6;
+  --card-bg: #ffffff;
+  --accent-color: #045C82;
+  --hover-color: #0275d8;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --nav-bg: #ffffff;
+  --card-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  --gradient-bg: linear-gradient(to bottom, #2c80d9, #57babc);
+}
+
+/* Dark Theme */
+body.dark-mode {
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  --text-primary: #f8f9fa;
+  --text-secondary: #adb5bd;
+  --text-tertiary: #212529;
+  --border-color: #343a40;
+  --card-bg: #242526;
+  --accent-color: #68b1d4;
+  --hover-color: #5bc0de;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --nav-bg: #242526;
+  --card-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  --gradient-bg: linear-gradient(to bottom, #222324, #101111);
+}
+
+/* Apply theme variables */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Page sections with gradient backgrounds */
+.hero-section,
+.search-page-header,
+.search-page {
+  background: var(--gradient-bg) !important;
+  color: var(--text-primary);
+  transition: background 0.3s ease;
+}
+
+.user-card {
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+a {
+  color: var(--accent-color);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--hover-color);
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
+  box-shadow: var(--shadow);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  opacity: 0.9;
+}
