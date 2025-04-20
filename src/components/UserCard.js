@@ -37,7 +37,7 @@ const UserCard = ({ user }) => {
               marginBottom: "12px"
             }}
           >
-            {user.name || user.login} | <a href={user.html_url} target="_blank" rel="noopener noreferrer">Visit Profile</a>
+            {user.name || user.login} | <a href={`https://github.com/${user.login}`} target="_blank" rel="noopener noreferrer">Visit Profile</a>
           </p>
           
           <div className="user-stats">

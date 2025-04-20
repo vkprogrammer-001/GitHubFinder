@@ -13,9 +13,9 @@ const FeatureCard = () => {
           </div>
           <br />
           <div className="feature-content">
-            <h3 style={{fontFamily: "Inknut Antiqua", fontSize:"20px", fontWeight:"bold", color: "var(--text-tertiary)"}}>{title}</h3>
+            <h3 style={{fontFamily: "Inknut Antiqua", fontSize:"20px", fontWeight:"bold"}}>{title}</h3>
             <br />
-            <p style={{fontFamily: "Inria Serif", fontSize:"16px", fontWeight:"normal", color: "var(--text-tertiary)"}}>{description}</p>
+            <p style={{fontFamily: "Inria Serif", fontSize:"16px", fontWeight:"normal"}}>{description}</p>
           </div>
         </div>
       ))}

@@ -113,7 +113,7 @@ const UserList = ({ searchTerm }) => {
           {searchTerm ? 'Searching...' : 'Find a GitHub Account'}
         </p>
       )}
-      {loading && <div className="loading">Loading more users...</div>}
+      {/* {loading && <div className="loading">Loading more users...</div>} */}
     </div>
   );
 };
